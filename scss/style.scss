@@ -1,0 +1,14 @@
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/mixins';
+
+@import 'theme/colors';
+
+@import 'components/button';
+@import 'components/card';
+
+@import 'layout/header';
+@import 'layout/feed';
+@import 'layout/footer';
+
+@import 'pages/newsfeed';
