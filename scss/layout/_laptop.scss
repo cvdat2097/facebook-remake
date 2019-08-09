@@ -12,28 +12,21 @@ section {
     border: 2px solid red;
 }
 
-#newsfeed {
-    border: 2px solid orange;
-}
-#widgets-container {
-    border: 2px solid greenyellow;
-}
 #footer {
-    border: 2px solid rebeccapurple;
+    margin-top: 100px;
 }
 
 // ============= /Sketching
 
 .container {
     width: 100%;
-    overflow: hidden;
+    min-width: map-get($breakpoints, 'large');
 }
 
 #nav-bar-container {
     padding-right: $messenger-bar-width;
     position: sticky;
     top: 0;
-    overflow: hidden;
 }
 
 #nav-bar {

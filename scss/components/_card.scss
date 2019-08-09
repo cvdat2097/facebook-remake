@@ -1,0 +1,25 @@
+.card {
+    background: $background-card-body;
+    border: 1px solid $border;
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 0.875rem;
+
+    .card-header {
+        border-bottom: 1px solid $border;
+        background: $background-card-header;
+        padding: 5px 10px;
+        font-size: 0.8125rem;
+        font-weight: bold;
+        color: $text-secondary;
+
+        &.transparent {
+            background: transparent;
+            border: none;
+        }
+    }
+
+    .card-body {
+        padding: 5px 10px;
+    }
+}

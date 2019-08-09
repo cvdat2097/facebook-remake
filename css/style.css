@@ -48,6 +48,29 @@ input[type=text] {
   border: none;
 }
 
+.card {
+  background: #ffffff;
+  border: 1px solid #dddfe2;
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 0.875rem;
+}
+.card .card-header {
+  border-bottom: 1px solid #dddfe2;
+  background: #f5f6f7;
+  padding: 5px 10px;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  color: #606770;
+}
+.card .card-header.transparent {
+  background: transparent;
+  border: none;
+}
+.card .card-body {
+  padding: 5px 10px;
+}
+
 .hoverable:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
@@ -233,28 +256,19 @@ section {
   border: 2px solid red;
 }
 
-#newsfeed {
-  border: 2px solid orange;
-}
-
-#widgets-container {
-  border: 2px solid greenyellow;
-}
-
 #footer {
-  border: 2px solid rebeccapurple;
+  margin-top: 100px;
 }
 
 .container {
   width: 100%;
-  overflow: hidden;
+  min-width: 1024px;
 }
 
 #nav-bar-container {
   padding-right: 210px;
   position: sticky;
   top: 0;
-  overflow: hidden;
 }
 
 #nav-bar {
