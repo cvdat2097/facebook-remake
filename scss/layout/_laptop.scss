@@ -12,32 +12,45 @@ section {
 
 .container {
     width: 100%;
+    overflow: hidden;
+}
+
+#nav-bar-container {
+    padding-right: $messenger-bar-width;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
 }
 
 #nav-bar {
-    position: sticky;
-    top: 0;
+    width: $container-width;
+    height: $nav-bar-height;
+    margin: 0 auto;
 }
 
 #main-container {
-    width: 1024px;
+    width: $container-width;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 180px auto 308px;
     grid-gap: 10px;
-    overflow: hidden;
 }
 
 #messenger-bar-container {
-    width: 210px;
+    width: $messenger-bar-width;
     float: right;
 }
 
 @media screen and (max-width: map-get($breakpoints, 'x-large')) {
+    #nav-bar-container {
+        padding-right: 0;
+    }
+
     #messenger-bar-container {
         float: none;
         position: fixed;
         bottom: 0;
         right: 50px;
+        height: auto;
     }
 }

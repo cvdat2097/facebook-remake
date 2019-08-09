@@ -1,0 +1,16 @@
+.btn {
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn-link {
+    display: inline-block;
+}
+
+.silent-link {
+    text-decoration: none !important;
+    color: inherit;
+}

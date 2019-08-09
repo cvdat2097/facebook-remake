@@ -1,3 +1,72 @@
-#nav-bar {
-    height: 42px;
+#nav-bar-container {
+    background-color: $color-primary;
+
+    #nav-bar {
+        display: flex;
+        align-items: center;
+
+        .logo-container {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: stretch;
+            width: 40vw;
+            min-width: 200px;
+            max-width: 450px;
+            height: 24px;
+
+            border-radius: 2px;
+            overflow: hidden;
+
+            input {
+                flex: 1 0;
+            }
+
+            button {
+                width: 48px;
+            }
+        }
+
+        .nav-bar-menu {
+            height: 24px;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+
+            .nav-bar-menu-item {
+                position: relative;
+                height: 100%;
+                padding: 0 10px;
+                display: inline-flex;
+                align-items: center;
+                border-radius: 5px;
+                font-size: 0.75rem;
+                font-weight: bold;
+                color: $text-white;
+                overflow: hidden;
+
+                &:hover {
+                    background: $background-hover;
+                }
+
+                .user-avatar {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
+            .nav-bar-menu-item + .nav-bar-menu-item::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                height: 75%;
+                border-left: 1px solid rgba(0,0,0,0.2);
+            }
+        }
+    }
 }
