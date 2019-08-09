@@ -4,11 +4,28 @@ body {
     padding: 0;
 }
 
+// ============ Sketching
 section {
-    border: 2px solid cornflowerblue;
     box-sizing: border-box;
-    min-height: 20px;
 }
+
+#messenger-bar-container {
+    border: 2px solid red;
+}
+#side-menu {
+    border: 2px solid cornflowerblue;
+}
+#newsfeed {
+    border: 2px solid orange;
+}
+#widgets-container {
+    border: 2px solid greenyellow;
+}
+#footer {
+    border: 2px solid rebeccapurple;
+}
+
+// ============= /Sketching
 
 .container {
     width: 100%;
@@ -39,6 +56,12 @@ section {
 #messenger-bar-container {
     width: $messenger-bar-width;
     float: right;
+}
+
+@media screen and (max-width: map-get($breakpoints, 'large')) {
+    #nav-bar {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: map-get($breakpoints, 'x-large')) {

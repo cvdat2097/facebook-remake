@@ -15,7 +15,7 @@
         .search-bar {
             display: flex;
             align-items: stretch;
-            width: 40vw;
+            width: 40%;
             min-width: 200px;
             max-width: 450px;
             height: 24px;
@@ -41,7 +41,6 @@
             .nav-bar-menu-item {
                 position: relative;
                 height: 100%;
-                padding: 0 10px;
                 display: inline-flex;
                 align-items: center;
                 border-radius: 5px;
@@ -50,13 +49,27 @@
                 color: $text-white;
                 overflow: hidden;
 
-                &:hover {
+                .btn-link {
+                    height: 100%;
+                    padding: 0 10px;
+                }
+
+                &:first-of-type .btn-link {
+                    padding-left: 0;
+                }
+
+                .btn-link:hover {
                     background: $background-hover;
                 }
 
                 .user-avatar {
-                    width: 25px;
-                    height: 25px;
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 5px;
+                }
+
+                .nav-button {
+                    margin: 0 8px;
                 }
             }
 
@@ -65,7 +78,7 @@
                 position: absolute;
                 left: 0;
                 height: 75%;
-                border-left: 1px solid rgba(0,0,0,0.2);
+                border-left: 1px solid rgba(0, 0, 0, 0.2);
             }
         }
     }

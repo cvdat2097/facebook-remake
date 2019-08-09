@@ -1,5 +1,6 @@
 .btn {
     border: none;
+    background: $background-button;
 
     &:hover {
         cursor: pointer;
@@ -7,7 +8,10 @@
 }
 
 .btn-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
 }
 
 .silent-link {

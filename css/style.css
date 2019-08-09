@@ -8,13 +8,17 @@ a * {
 
 .btn {
   border: none;
+  background: #ebedf0;
 }
 .btn:hover {
   cursor: pointer;
 }
 
 .btn-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
 }
 
 .silent-link {
@@ -22,6 +26,9 @@ a * {
   color: inherit;
 }
 
+input {
+  font-size: 0.875rem;
+}
 input[type=text] {
   padding: 0 10px;
   min-width: 0;
@@ -39,17 +46,17 @@ input[type=text] {
   height: 24px;
   background-position: -156px -308px;
 }
+.fb-icon.fb-icon-search {
+  width: 16px;
+  height: 16px;
+  background-position: -139px -264px;
+}
 .fb-icon.fb-icon-search-light {
   width: 16px;
   height: 16px;
   background-position: -155px -264px;
 }
-.fb-icon.fb-icon-search-dark {
-  width: 16px;
-  height: 16px;
-  background-position: -139px -264px;
-}
-.fb-icon.fb-icon-friends-dark {
+.fb-icon.fb-icon-friends {
   width: 24px;
   height: 24px;
   background-position: -77px -360px;
@@ -59,7 +66,7 @@ input[type=text] {
   height: 24px;
   background-position: -103px -360px;
 }
-.fb-icon.fb-icon-messages-dark {
+.fb-icon.fb-icon-messages {
   width: 24px;
   height: 24px;
   background-position: -129px -360px;
@@ -69,7 +76,7 @@ input[type=text] {
   height: 24px;
   background-position: -154px -360px;
 }
-.fb-icon.fb-icon-notification-dark {
+.fb-icon.fb-icon-notification {
   width: 24px;
   height: 24px;
   background-position: -233px -334px;
@@ -79,7 +86,7 @@ input[type=text] {
   height: 24px;
   background-position: 0px -360px;
 }
-.fb-icon.fb-icon-help-dark {
+.fb-icon.fb-icon-help {
   width: 24px;
   height: 24px;
   background-position: -182px -360px;
@@ -89,7 +96,7 @@ input[type=text] {
   height: 24px;
   background-position: -207px -360px;
 }
-.fb-icon.fb-icon-more-dark {
+.fb-icon.fb-icon-more {
   width: 24px;
   height: 24px;
   background-position: -25px -360px;
@@ -125,9 +132,27 @@ body {
 }
 
 section {
-  border: 2px solid cornflowerblue;
   box-sizing: border-box;
-  min-height: 20px;
+}
+
+#messenger-bar-container {
+  border: 2px solid red;
+}
+
+#side-menu {
+  border: 2px solid cornflowerblue;
+}
+
+#newsfeed {
+  border: 2px solid orange;
+}
+
+#widgets-container {
+  border: 2px solid greenyellow;
+}
+
+#footer {
+  border: 2px solid rebeccapurple;
 }
 
 .container {
@@ -161,6 +186,11 @@ section {
   float: right;
 }
 
+@media screen and (max-width: 1024px) {
+  #nav-bar {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1280px) {
   #nav-bar-container {
     padding-right: 0;
@@ -190,7 +220,7 @@ section {
 #nav-bar-container #nav-bar .search-bar {
   display: flex;
   align-items: stretch;
-  width: 40vw;
+  width: 40%;
   min-width: 200px;
   max-width: 450px;
   height: 24px;
@@ -212,7 +242,6 @@ section {
 #nav-bar-container #nav-bar .nav-bar-menu .nav-bar-menu-item {
   position: relative;
   height: 100%;
-  padding: 0 10px;
   display: inline-flex;
   align-items: center;
   border-radius: 5px;
@@ -221,12 +250,23 @@ section {
   color: #ffffff;
   overflow: hidden;
 }
-#nav-bar-container #nav-bar .nav-bar-menu .nav-bar-menu-item:hover {
+#nav-bar-container #nav-bar .nav-bar-menu .nav-bar-menu-item .btn-link {
+  height: 100%;
+  padding: 0 10px;
+}
+#nav-bar-container #nav-bar .nav-bar-menu .nav-bar-menu-item:first-of-type .btn-link {
+  padding-left: 0;
+}
+#nav-bar-container #nav-bar .nav-bar-menu .nav-bar-menu-item .btn-link:hover {
   background: rgba(0, 0, 0, 0.2);
 }
 #nav-bar-container #nav-bar .nav-bar-menu .nav-bar-menu-item .user-avatar {
-  width: 25px;
-  height: 25px;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+#nav-bar-container #nav-bar .nav-bar-menu .nav-bar-menu-item .nav-button {
+  margin: 0 8px;
 }
 #nav-bar-container #nav-bar .nav-bar-menu .nav-bar-menu-item + .nav-bar-menu-item::before {
   content: "";
