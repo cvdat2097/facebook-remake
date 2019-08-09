@@ -3,12 +3,13 @@
 @import 'utils/mixins';
 
 @import 'theme/colors';
+@import 'theme/typography';
 
 @import 'components/button';
 @import 'components/card';
 
-@import 'layout/header';
-@import 'layout/feed';
-@import 'layout/footer';
+@import 'layout/config';
+@import 'layout/laptop';
+@import 'layout/navbar';
 
 @import 'pages/newsfeed';

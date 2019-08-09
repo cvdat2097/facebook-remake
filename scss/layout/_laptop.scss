@@ -1,0 +1,43 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    border: 2px solid cornflowerblue;
+    box-sizing: border-box;
+    min-height: 20px;
+}
+
+.container {
+    width: 100%;
+}
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+}
+
+#main-container {
+    width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 180px auto 308px;
+    grid-gap: 10px;
+    overflow: hidden;
+}
+
+#messenger-bar-container {
+    width: 210px;
+    float: right;
+}
+
+@media screen and (max-width: map-get($breakpoints, 'x-large')) {
+    #messenger-bar-container {
+        float: none;
+        position: fixed;
+        bottom: 0;
+        right: 50px;
+    }
+}
