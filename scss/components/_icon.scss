@@ -1,0 +1,182 @@
+.nav-icon {
+    display: inline-block;
+    background: url('../assets/nav-icons.png');
+    background-repeat: no-repeat;
+    background-size: 284px 408px;
+
+    &.nav-icon-logo {
+        width: 24px;
+        height: 24px;
+        background-position: -156px -308px;
+    }
+
+    &.nav-icon-search {
+        width: 16px;
+        height: 16px;
+        background-position: -139px -264px;
+    }
+
+    &.nav-icon-search-light {
+        width: 16px;
+        height: 16px;
+        background-position: -155px -264px;
+    }
+
+    &.nav-icon-friends {
+        width: 24px;
+        height: 24px;
+        background-position: -77px -360px;
+    }
+    &.nav-icon-friends-light {
+        width: 24px;
+        height: 24px;
+        background-position: -103px -360px;
+    }
+
+    &.nav-icon-messages {
+        width: 24px;
+        height: 24px;
+        background-position: -129px -360px;
+    }
+    &.nav-icon-messages-light {
+        width: 24px;
+        height: 24px;
+        background-position: -154px -360px;
+    }
+
+    &.nav-icon-notification {
+        width: 24px;
+        height: 24px;
+        background-position: -233px -334px;
+    }
+    &.nav-icon-notification-light {
+        width: 24px;
+        height: 24px;
+        background-position: -0px -360px;
+    }
+
+    &.nav-icon-help {
+        width: 24px;
+        height: 24px;
+        background-position: -182px -360px;
+    }
+    &.nav-icon-help-light {
+        width: 24px;
+        height: 24px;
+        background-position: -207px -360px;
+    }
+
+    &.nav-icon-more {
+        width: 24px;
+        height: 24px;
+        background-position: -26px -362px;
+    }
+    &.nav-icon-more-light {
+        width: 24px;
+        height: 24px;
+        background-position: -52px -362px;
+    }
+}
+
+.fb-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/fb-icons.png');
+    background-size: 38px 1684px;
+    background-repeat: no-repeat;
+
+    &.fb-icon-newsfeed {
+        background-position: 0 -742px;
+    }
+
+    &.fb-icon-more {
+        background-position: 0 -1336px;
+    }
+
+    &.fb-icon-messenger {
+        background-position: 0 -192px;
+    }
+
+    &.fb-icon-watch {
+        background-position: 0 -1160px;
+    }
+
+    &.fb-icon-marketplace {
+        background-position: 0 -720px;
+    }
+
+    &.fb-icon-group {
+        background-position: 0 -918px;
+    }
+
+    &.fb-icon-groups {
+        background-position: 0 -148px;
+    }
+
+    &.fb-icon-pages {
+        background-position: 0 -236px;
+    }
+
+    &.fb-icon-fundraisers {
+        background-position: 0 -588px;
+    }
+
+    &.fb-icon-saved {
+        background-position: 0 -258px;
+    }
+
+    &.fb-icon-games {
+        background-position: 0 -808px;
+    }
+
+    &.fb-icon-memories {
+        background-position: 0 -170px;
+    }
+
+    &.fb-icon-crisis {
+        background-position: 0 -412px;
+    }
+
+    &.fb-icon-jobs {
+        background-position: 0 -280px;
+    }
+
+    &.fb-icon-gamingvideos {
+        background-position: 0 -126px;
+    }
+
+    &.fb-icon-recommendations {
+        background-position: 0 -456px;
+    }
+
+    &.fb-icon-offers {
+        background-position: 0 -786px;
+    }
+
+    &.fb-icon-weather {
+        background-position: 0 -1050px;
+    }
+
+    &.fb-icon-adactivity {
+        background-position: 0 -962px;
+    }
+
+    &.fb-icon-friendlists {
+        background-position: 0 -544px;
+    }
+
+    &.fb-icon-apps {
+        background-image: url(../assets/fb-icons-2.png);
+        background-size: 22px 318px;
+        background-repeat: no-repeat;
+        background-position: 0 -22px;
+    }
+
+    &.fb-icon-calendar {
+        background-image: url(../assets/icons-calendar.png);
+        background-size: 22px 120px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+}

@@ -20,19 +20,21 @@
                 <section id="nav-bar">
                     <div class="logo-container">
                         <a href="#">
-                            <span class="fb-icon fb-icon-logo hoverable"></span>
+                            <span
+                                class="nav-icon nav-icon-logo hoverable"
+                            ></span>
                         </a>
                     </div>
                     <div class="search-bar">
                         <input type="text" placeholder="Search" />
                         <button class="btn">
-                            <span class="fb-icon fb-icon-search"></span>
+                            <span class="nav-icon nav-icon-search"></span>
                         </button>
                     </div>
                     <div class="nav-bar-menu">
                         <div class="nav-bar-menu-item">
                             <a href="#" class="btn-link silent-link">
-                                <div class="user-avatar rounded">
+                                <div class="user-avatar rounded-img">
                                     <img src="assets/user-avatar.png" />
                                 </div>
                                 <span>
@@ -52,22 +54,26 @@
                         </div>
                         <div class="nav-bar-menu-item">
                             <span
-                                class="nav-button fb-icon fb-icon-friends clickable"
+                                class="nav-button nav-icon nav-icon-friends clickable"
                             >
                             </span>
                             <span
-                                class="nav-button fb-icon fb-icon-messages clickable"
+                                class="nav-button nav-icon nav-icon-messages clickable"
                             >
                             </span>
                             <span
-                                class="nav-button fb-icon fb-icon-notification clickable"
+                                class="nav-button nav-icon nav-icon-notification clickable"
                             >
                             </span>
                         </div>
                         <div class="nav-bar-menu-item">
-                            <span class="nav-button fb-icon fb-icon-help clickable">
+                            <span
+                                class="nav-button nav-icon nav-icon-help clickable"
+                            >
                             </span>
-                            <span class="nav-button fb-icon fb-icon-more clickable">
+                            <span
+                                class="nav-button nav-icon nav-icon-more clickable"
+                            >
                             </span>
                         </div>
                     </div>
@@ -77,8 +83,366 @@
             <div id="messenger-bar-container">
                 <section id="messenger-bar">MESSENGER BAR</section>
             </div>
+
             <main id="main-container">
-                <section id="side-menu">SIDE MENU</section>
+                <section id="side-menu">
+                    <div class="menu-group">
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="item-icon rounded-img">
+                                    <img src="./assets/user-avatar.png" />
+                                </div>
+                                <div class="item-caption">
+                                    Jelly
+                                </div>
+                                <div class="item-badge">
+                                    <div class="item-settings">
+                                        <a href="#">
+                                            <span
+                                                class="fb-icon fb-icon-more"
+                                            ></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-group">
+                        <div class="menu-items">
+                            <div class="menu-item active">
+                                <div class="item-icon">
+                                    <span
+                                        class="fb-icon fb-icon-newsfeed"
+                                    ></span>
+                                </div>
+                                <div class="item-caption">
+                                    News Feed
+                                </div>
+                                <div class="item-badge">
+                                    <div class="item-settings fixed">
+                                        <a href="#">
+                                            <span
+                                                class="fb-icon fb-icon-more"
+                                            ></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span
+                                        class="fb-icon fb-icon-messenger"
+                                    ></span>
+                                </div>
+                                <div class="item-caption">
+                                    Messenger
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span class="fb-icon fb-icon-watch"></span>
+                                </div>
+                                <div class="item-caption">
+                                    Videos on Watch
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span
+                                        class="fb-icon fb-icon-marketplace"
+                                    ></span>
+                                </div>
+                                <div class="item-caption">
+                                    Marketplace
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-group">
+                        <div class="menu-header">
+                            <span class="header-caption">Shorcuts</span>
+                            <a class="header-settings" href="#">Edit</a>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span class="fb-icon fb-icon-group"></span>
+                                </div>
+                                <div class="item-caption">
+                                    Cat Island
+                                </div>
+                                <div class="item-badge">
+                                    <div class="item-settings">
+                                        <a href="#">
+                                            <span
+                                                class="fb-icon fb-icon-more"
+                                            ></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span class="fb-icon fb-icon-group"></span>
+                                </div>
+                                <div class="item-caption">
+                                    How to be a senior developer
+                                </div>
+                                <div class="item-badge">
+                                    <div class="item-settings">
+                                        <a href="#">
+                                            <span
+                                                class="fb-icon fb-icon-more"
+                                            ></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon rounded-img">
+                                    <img src="./assets/othello.png" />
+                                </div>
+                                <div class="item-caption">
+                                    Othello
+                                </div>
+                                <div class="item-badge">
+                                    <div class="item-settings">
+                                        <a href="#">
+                                            <span
+                                                class="fb-icon fb-icon-more"
+                                            ></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span class="fb-icon fb-icon-group"></span>
+                                </div>
+                                <div class="item-caption">
+                                    Thesis 2019
+                                </div>
+                                <div class="item-badge">
+                                    <div class="item-property">
+                                        7
+                                    </div>
+                                    <div class="item-settings">
+                                        <a href="#">
+                                            <span
+                                                class="fb-icon fb-icon-more"
+                                            ></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item more-button">
+                                <div class="item-icon">
+                                    <span class="nav-icon nav-icon-more"></span>
+                                </div>
+                                <a href="#">See more...</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-group">
+                        <div class="menu-header">
+                            Explore
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item active">
+                                <div class="item-icon">
+                                    <span
+                                        class="fb-icon fb-icon-calendar"
+                                    ></span>
+                                </div>
+                                <div class="item-caption">
+                                    Events
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span class="fb-icon fb-icon-groups"></span>
+                                </div>
+                                <div class="item-caption">
+                                    Groups
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span class="fb-icon fb-icon-pages"></span>
+                                </div>
+                                <div class="item-caption">
+                                    Pages
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span
+                                        class="fb-icon fb-icon-fundraisers"
+                                    ></span>
+                                </div>
+                                <div class="item-caption">
+                                    Fundraisers
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span class="fb-icon fb-icon-saved"></span>
+                                </div>
+                                <div class="item-caption">
+                                    Saved
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span class="fb-icon fb-icon-games"></span>
+                                </div>
+                                <div class="item-caption">
+                                    Games
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span
+                                        class="fb-icon fb-icon-memories"
+                                    ></span>
+                                </div>
+                                <div class="item-caption">
+                                    Memories
+                                </div>
+                                <div class="item-badge">
+                                    <div class="item-property">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span class="fb-icon fb-icon-apps"></span>
+                                </div>
+                                <div class="item-caption">
+                                    Manage Apps
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span class="fb-icon fb-icon-crisis"></span>
+                                </div>
+                                <div class="item-caption">
+                                    Crisis Response
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span class="fb-icon fb-icon-jobs"></span>
+                                </div>
+                                <div class="item-caption">
+                                    Jobs
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span
+                                        class="fb-icon fb-icon-gamingvideos"
+                                    ></span>
+                                </div>
+                                <div class="item-caption">
+                                    Gaming Videos
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span
+                                        class="fb-icon fb-icon-recommendations"
+                                    ></span>
+                                </div>
+                                <div class="item-caption">
+                                    Recommendations
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span class="fb-icon fb-icon-offers"></span>
+                                </div>
+                                <div class="item-caption">
+                                    Offers
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span
+                                        class="fb-icon fb-icon-weather"
+                                    ></span>
+                                </div>
+                                <div class="item-caption">
+                                    Weather
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span
+                                        class="fb-icon fb-icon-adactivity"
+                                    ></span>
+                                </div>
+                                <div class="item-caption">
+                                    Recent ad activity
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-icon">
+                                    <span
+                                        class="fb-icon fb-icon-friendlists"
+                                    ></span>
+                                </div>
+                                <div class="item-caption">
+                                    Friends lists
+                                </div>
+                                <div class="item-badge"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section id="newsfeed">
                     NEWSFEED
                     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

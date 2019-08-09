@@ -4,11 +4,13 @@
 
 @import 'theme/colors';
 @import 'theme/typography';
+@import 'theme/default.scss';
 
 @import 'components/button';
 @import 'components/input';
 @import 'components/card';
 @import 'components/miscellaneous';
+@import 'components/icon';
 
 @import 'layout/config';
 @import 'layout/laptop';

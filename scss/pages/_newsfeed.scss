@@ -1,0 +1,84 @@
+#side-menu {
+    .menu-group {
+        font-size: 0.8125rem;
+        margin-bottom: 10px;
+
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+
+            .header-settings {
+                font-weight: normal;
+                display: none;
+            }
+
+            font-weight: bold;
+            color: $text-secondary;
+        }
+
+        &:hover {
+            .header-settings {
+                display: inline-block;
+            }
+        }
+
+        .menu-items {
+            .menu-item {
+                display: flex;
+                min-width: 0;
+                align-items: center;
+                padding: 5px;
+                border: 1px solid transparent;
+                box-sizing: border-box;
+
+                .item-icon {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 5px;
+                }
+
+                .item-caption {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    &.active {
+                        font-weight: 900;
+                    }
+                }
+
+                .item-badge {
+                    flex-basis: 30px;
+                    display: inline-flex;
+                    justify-content: flex-end;
+                    margin-left: auto;
+                    color: $text-secondary;
+                    font-size: 0.6875rem;
+
+                    .item-settings:not(.fixed) {
+                        display: none;
+                    }
+                }
+
+                &.active,
+                &:hover:not(.more-button) {
+                    cursor: pointer;
+                    background: $background-hover-light;
+                    border: 1px solid $border;
+                }
+
+                &.active {
+                    font-weight: bold;
+                }
+
+                &:hover .item-badge {
+                    .item-property:not(.fixed) {
+                        display: none;
+                    }
+                    .item-settings {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
