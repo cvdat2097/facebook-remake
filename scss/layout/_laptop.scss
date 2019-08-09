@@ -38,9 +38,23 @@ section {
 #main-container {
     width: $container-width;
     margin: 10px auto 0 auto;
-    display: grid;
-    grid-template-columns: 180px auto 308px;
+    // display: grid;
+    // grid-template-columns: 180px auto 308px;
+    @include display-grid;
+    @include grid-template-columns(180px auto 308px);
     grid-gap: 10px;
+
+    #side-menu {
+        @include grid-column(1);
+    }
+
+    #newsfeed {
+        @include grid-column(2);
+    }
+
+    .side-container {
+        @include grid-column(3);
+    }
 }
 
 #messenger-bar-container {

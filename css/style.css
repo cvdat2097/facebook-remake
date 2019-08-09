@@ -281,8 +281,22 @@ section {
   width: 1024px;
   margin: 10px auto 0 auto;
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 180px auto 308px;
+  -ms-grid-columns: 180px auto 308px;
   grid-gap: 10px;
+}
+#main-container #side-menu {
+  grid-column: 1;
+  -ms-grid-column: 1;
+}
+#main-container #newsfeed {
+  grid-column: 2;
+  -ms-grid-column: 2;
+}
+#main-container .side-container {
+  grid-column: 3;
+  -ms-grid-column: 3;
 }
 
 #messenger-bar-container {

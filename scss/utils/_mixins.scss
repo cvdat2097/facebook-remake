@@ -1,0 +1,15 @@
+// For IE 10
+@mixin display-grid {
+    display: grid;
+    display: -ms-grid;
+}
+
+@mixin grid-template-columns($args) {
+    grid-template-columns: $args;
+    -ms-grid-columns: $args;
+}
+
+@mixin grid-column($args) {
+    grid-column: $args;
+    -ms-grid-column: $args;
+}
