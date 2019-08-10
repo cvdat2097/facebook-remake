@@ -189,10 +189,16 @@
     background-image: url(../assets/controls.png);
     background-size: 54px 470px;
     background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
     display: inline-block;
 
     &.control-icon-birthday {
         background-position: -18px -338px;
+    }
+
+    &.control-icon-store {
+        background-position: -36px -320px;
     }
 }
 
