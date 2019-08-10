@@ -166,6 +166,10 @@
         background-position: 0 -544px;
     }
 
+    &.fb-icon-down {
+        background-position: 0 -1666px;
+    }
+
     &.fb-icon-apps {
         background-image: url(../assets/fb-icons-2.png);
         background-size: 22px 318px;
@@ -189,5 +193,42 @@
 
     &.control-icon-birthday {
         background-position: -18px -338px;
+    }
+}
+
+.page-icon {
+    background-image: url(../assets/pages.png);
+    background-size: 206px 8136px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+
+    &.page-icon-messages {
+        background-position: -168px -3032px;
+    }
+
+    &.page-icon-notification {
+        background-position: 0 -3310px;
+        background-image: url(../assets/pages-2.png);
+        background-size: 34px 4588px;
+    }
+
+    &.page-icon-publish {
+        background-image: url(../assets/pages-3.png);
+        background-size: 36px 90px;
+        background-position: 0 -54px;
+    }
+
+    &.page-icon-photo {
+        @extend .page-icon-publish;
+
+        background-position: -18px -36px;
+    }
+
+    &.page-icon-live {
+        @extend .page-icon-publish;
+
+        background-position: 0px -36px;
     }
 }

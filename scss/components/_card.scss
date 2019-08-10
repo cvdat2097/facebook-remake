@@ -13,8 +13,12 @@
         font-weight: bold;
         color: $text-secondary;
 
-        &.transparent {
+        &.transparent-with-border {
             background: transparent;
+        }
+
+        &.transparent {
+            @extend .transparent-with-border;
             border: none;
         }
     }
