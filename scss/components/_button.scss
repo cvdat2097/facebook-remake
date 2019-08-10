@@ -1,9 +1,33 @@
+.btn-group {
+    display: flex;
+    border: 1px solid $border;
+    box-shadow: border-box;
+
+    .btn {
+        flex-grow: 1;
+        border: none;
+    }
+
+    .btn + .btn {
+        border-left: 1px solid $border;
+    }
+}
+
 .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     background: $background-button;
+    border: 1px solid $border;
 
     &:hover {
+        background: $background-hover !important;
         cursor: pointer;
+    }
+
+    &.transparent {
+        background: none;
     }
 }
 
