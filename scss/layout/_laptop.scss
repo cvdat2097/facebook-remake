@@ -7,13 +7,6 @@ section {
     box-sizing: border-box;
 }
 
-// ============ Sketching
-#messenger-bar-container {
-    border: 2px solid red;
-}
-
-// ============= /Sketching
-
 .container {
     width: 100%;
     min-width: map-get($breakpoints, 'large');
@@ -33,6 +26,7 @@ section {
 
 #main-container {
     width: $container-width;
+    padding-right: $messenger-bar-width;
     margin: 10px auto 0 auto;
     // display: grid;
     // grid-template-columns: 180px auto 308px;
@@ -55,7 +49,10 @@ section {
 
 #messenger-bar-container {
     width: $messenger-bar-width;
-    float: right;
+    position: fixed;
+    right: 0;
+    top: $nav-bar-height;
+    bottom: 0;
 }
 
 @media screen and (max-width: map-get($breakpoints, 'large')) {
@@ -65,14 +62,17 @@ section {
 }
 
 @media screen and (max-width: map-get($breakpoints, 'x-large')) {
+    #main-container {
+        padding-right: 0;
+    }
+
     #nav-bar-container {
         padding-right: 0;
     }
 
     #messenger-bar-container {
-        float: none;
         position: fixed;
-        bottom: 0;
+        top: auto;
         right: 50px;
         height: auto;
     }

@@ -1,0 +1,110 @@
+#messenger-bar-container {
+    border: 1px solid $border;
+
+    #messenger-bar {
+        height: calc(100% - #{$messenger-bar-settings-height});
+        overflow-y: scroll;
+    }
+
+    .contact-header {
+        padding: 3px 5px;
+        color: $text-secondary;
+        font-size: 0.7rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+        min-width: 0;
+        padding: 3px 5px;
+
+        .avatar {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        .contact-summary {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            overflow: hidden;
+            white-space: nowrap;
+
+            font-size: 0.75rem;
+
+            .contact-name {
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .contact-description {
+                @extend .contact-name;
+
+                font-size: 0.6rem;
+                color: $text-secondary;
+            }
+        }
+
+        .contact-badge {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-left: auto;
+
+            .contact-wave {
+                display: none;
+                background-image: url(../assets/wave-icon.png);
+                background-size: 20px 40px;
+                background-repeat: no-repeat;
+                background-position: 0px 0px;
+                height: 18px;
+                width: 18px;
+            }
+
+            .online-status {
+                margin-left: 5px;
+                font-size: 0.6rem;
+                color: $text-muted;
+            }
+
+            .online-status.online {
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                overflow: hidden;
+                background: yellowgreen;
+            }
+        }
+
+        &:hover {
+            background: $background-hover-light;
+            cursor: pointer;
+
+            .contact-wave {
+                display: inline-block;
+            }
+        }
+    }
+
+    #messenger-bar-settings {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        height: $messenger-bar-settings-height;
+        background: $white;
+
+        .search-box {
+            outline: none;
+        }
+
+        .setting-button  {
+            margin-left: 5px;
+        }
+    }
+}

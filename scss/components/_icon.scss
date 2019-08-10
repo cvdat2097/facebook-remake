@@ -266,3 +266,28 @@
         background-position: 0 -72px;
     }
 }
+
+.messenger-icon {
+    display: inline-block;
+    background-image: url(../assets/fb-messenger-bar-icons.png);
+    background-repeat: no-repeat;
+    background-size: 28px 1006px;
+    width: 30px;
+    height: 16px;
+
+    &.messenger-icon-search {
+        background-position: 0 -638px;
+    }
+
+    &.messenger-icon-settings {
+        background-position: 0 -692px;
+    }
+
+    &.messenger-icon-compose {
+        background-position: 0 -404px;
+    }
+
+    &.messenger-icon-create-groups {
+        background-position: 0 -512px;
+    }
+}
