@@ -1,13 +1,23 @@
 #messenger-bar-container {
     border: 1px solid $border;
 
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    &:hover {
+        ::-webkit-scrollbar {
+            display: block;
+        }
+    }
+
     #messenger-bar {
         height: calc(100% - #{$messenger-bar-settings-height});
-        overflow-y: scroll;
+        overflow-y: overlay;
     }
 
     .contact-header {
-        padding: 3px 5px;
+        padding: 10px 5px;
         color: $text-secondary;
         font-size: 0.7rem;
         font-weight: bold;
@@ -103,7 +113,7 @@
             outline: none;
         }
 
-        .setting-button  {
+        .setting-button {
             margin-left: 5px;
         }
     }
