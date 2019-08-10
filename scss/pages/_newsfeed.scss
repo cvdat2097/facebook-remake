@@ -400,4 +400,32 @@
             }
         }
     }
+
+    .language-list {
+        margin-top: 10px;
+        font-size: 0.8125rem;
+        padding: 5px;
+
+        .card-body {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .current-language {
+            color: $text-secondary;
+        }
+
+        .available-language {
+            white-space: nowrap;
+
+            &::before {
+                content: '· ';
+                color: $text-secondary;
+            }
+        }
+
+        .language-action {
+            display: inline-block;
+        }
+    }
 }
