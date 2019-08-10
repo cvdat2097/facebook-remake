@@ -250,6 +250,10 @@
                 font-weight: bold;
             }
 
+            .btn {
+                padding: 0;
+            }
+
             .more-button {
                 width: 30px;
                 height: 30px;
@@ -321,6 +325,79 @@
             display: inline-block;
             margin-top: 10px;
             font-size: 0.8125rem;
+        }
+    }
+
+    .suggested-groups {
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                font-weight: normal;
+            }
+        }
+
+        .fb-group {
+            margin-bottom: 15px;
+
+            .card-body {
+                padding: 0;
+            }
+
+            .fb-group-cover {
+                position: relative;
+                width: 100%;
+                height: 120px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                a.link-to-fb-group {
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .fb-group-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                padding: 10px;
+
+                .fb-group-name {
+                    font-weight: bold;
+                    font-size: 0.75rem;
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+
+                .fb-group-description {
+                    color: $text-secondary;
+                }
+
+                .fb-group-description {
+                    display: inline-block;
+                    font-size: 0.8125rem;
+                    margin-top: 5px;
+                }
+            }
+
+            .fb-group-action {
+                font-size: 0.75rem;
+                font-weight: bold;
+                color: $text-muted;
+            }
         }
     }
 }
