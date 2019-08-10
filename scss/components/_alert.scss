@@ -1,0 +1,34 @@
+.alert {
+    position: relative;
+    padding: 2px 5px;
+
+    .alert-body {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .alert-close {
+        display: none;
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+
+        background: url('../assets/close-button.png');
+
+        &:hover {
+            background-position: 0 12px;
+        }
+    }
+
+    &:hover {
+        background: $background-card-header;
+        cursor: pointer;
+
+        .alert-close {
+            display: inline-block;
+        }
+    }
+}

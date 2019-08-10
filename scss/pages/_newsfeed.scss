@@ -82,3 +82,32 @@
         }
     }
 }
+
+#widgets-container {
+    .alerts-container {
+        font-size: 0.8125rem;
+
+        .alert + .alert {
+            margin-top: 2px;
+        }
+
+        .fb-alert-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            vertical-align: bottom;
+        }
+
+        .alert-link {
+            text-decoration: none;
+
+            * {
+                vertical-align: baseline;
+            }
+        }
+
+        .alert-description {
+            color: $text-small;
+        }
+    }
+}
