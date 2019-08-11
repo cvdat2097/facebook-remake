@@ -6,12 +6,18 @@
     font-size: 0.875rem;
 
     .card-header {
+        display: flex;
+        align-items: center;
         border-bottom: 1px solid $border;
         background: $background-card-header;
         padding: 5px 10px;
         font-size: 0.8125rem;
         font-weight: bold;
         color: $text-secondary;
+
+        .header-property {
+            margin-left: auto;
+        }
 
         .header-link {
             float: right;

@@ -903,9 +903,16 @@
                     </div>
                 </section>
                 <section id="newsfeed">
+                    <!-- Add .showw -->
+                    <div class="new-post-backdrop"></div>
+
+                    <!-- add .expanded -->
                     <div class="new-post card">
                         <div class="card-header">
-                            Create post
+                            <span>Create post</span>
+                            <span
+                                class="composer-close composer-icon composer-icon-close header-property clickable"
+                            ></span>
                         </div>
                         <div class="card-body">
                             <div class="composer">
@@ -918,7 +925,8 @@
                                     placeholder="What's on your mind, Jelly?"
                                 />
                             </div>
-                            <div class="composer-actions">
+
+                            <div class="composer-actions expanded">
                                 <div
                                     class="composer-action badge-rounded clickable"
                                 >
@@ -941,10 +949,60 @@
                                 </div>
 
                                 <div
+                                    class="hide composer-action badge-rounded clickable"
+                                >
+                                    <i class="fb-icon fb-icon-check-in"></i>
+                                    <span>Check in</span>
+                                </div>
+
+                                <div
+                                    class="hide composer-action badge-rounded clickable"
+                                >
+                                    <i class="fb-icon fb-icon-live-video"></i>
+                                    <span>Live Video</span>
+                                </div>
+
+                                <div
+                                    class="hide composer-action badge-rounded clickable"
+                                >
+                                    <i class="fb-icon fb-icon-gif"></i>
+                                    <span>GIF</span>
+                                </div>
+
+                                <div
+                                    class="hide composer-action badge-rounded clickable"
+                                >
+                                    <i
+                                        class="fb-icon fb-icon-ask-recommendation"
+                                    ></i>
+                                    <span>Ask for recommendations</span>
+                                </div>
+
+                                <div
+                                    class="hide composer-action badge-rounded clickable"
+                                >
+                                    <i class="fb-icon fb-icon-watch-party"></i>
+                                    <span>Watch Party</span>
+                                </div>
+
+                                <div
+                                    class="hide composer-action badge-rounded clickable"
+                                >
+                                    <i
+                                        class="fb-icon fb-icon-play-with-friends"
+                                    ></i>
+                                    <span>Play with friends</span>
+                                </div>
+
+                                <div
                                     class="composer-action more badge-rounded clickable"
                                 >
                                     <i class="fb-icon fb-icon-more"></i>
                                 </div>
+                            </div>
+
+                            <div class="composer-submit expanded">
+                                <button class="btn btn-primary">Post</button>
                             </div>
                         </div>
                     </div>

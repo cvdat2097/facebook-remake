@@ -456,8 +456,65 @@
     .card {
         margin-bottom: 10px;
     }
+    .new-post-backdrop {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: $background-hover;
+        z-index: 100;
 
+        &.show {
+            display: block;
+        }
+    }
     .new-post {
+        .composer-close {
+            display: none;
+        }
+
+        &.expanded {
+            position: relative;
+            z-index: 101;
+
+            .composer-close {
+                display: inline-block;
+            }
+
+            .composer-actions {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .composer-action.more {
+                    display: none;
+                }
+
+                .composer-action.hide {
+                    display: inline-block;
+                }
+
+                .composer-action {
+                    flex: 0 0 45%;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .composer-submit {
+                display: flex;
+                padding-bottom: 10px;
+            }
+
+            button {
+                font-weight: bold;
+                color: $white;
+                display: inline-block;
+                flex-grow: 1;
+            }
+        }
+
         .composer {
             display: flex;
             align-items: center;
@@ -483,6 +540,10 @@
         .composer-actions {
             padding: 10px 0;
 
+            .composer-action.hide {
+                display: none;
+            }
+
             .composer-action {
                 padding: 5px 10px;
 
@@ -499,6 +560,10 @@
                     vertical-align: middle;
                 }
             }
+        }
+
+        .composer-submit {
+            display: none;
         }
     }
 

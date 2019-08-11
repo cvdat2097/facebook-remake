@@ -182,6 +182,30 @@
         background-position: 0 -522px;
     }
 
+    &.fb-icon-check-in {
+        background-position: 0 -896px;
+    }
+
+    &.fb-icon-live-video {
+        background-position: 0 -698px;
+    }
+
+    &.fb-icon-gif {
+        background-position: 0 -610px;
+    }
+
+    &.fb-icon-ask-recommendation {
+        background-position: 0 -456px;
+    }
+
+    &.fb-icon-watch-party {
+        background-position: 0 -1138px;
+    }
+
+    &.fb-icon-play-with-friends {
+        background-position: 0 -170px;
+    }
+
     &.fb-icon-apps {
         background-image: url(../assets/fb-icons-2.png);
         background-size: 22px 318px;
@@ -307,5 +331,18 @@
 
     &.messenger-icon-create-groups {
         background-position: 0 -512px;
+    }
+}
+
+.composer-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../assets/composer-icons.png);
+    background-size: 500px 304px;
+    background-repeat: no-repeat;
+
+    &.composer-icon-close {
+        background-position: -310px -250px;
     }
 }
