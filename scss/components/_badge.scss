@@ -6,3 +6,9 @@
     background: $white;
     padding: 3px;
 }
+
+.badge-rounded {
+    @extend .badge;
+
+    border-radius: 15px;
+}

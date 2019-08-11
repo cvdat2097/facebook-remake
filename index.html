@@ -903,16 +903,53 @@
                     </div>
                 </section>
                 <section id="newsfeed">
-                    <div class="card">
+                    <div class="new-post card">
                         <div class="card-header">
                             Create post
                         </div>
                         <div class="card-body">
-                            What's on your mind, Jelly?
+                            <div class="composer">
+                                <div class="avatar rounded-img">
+                                    <img src="assets/user-avatar.png" />
+                                </div>
+                                <input
+                                    type="text"
+                                    id="text-input"
+                                    placeholder="What's on your mind, Jelly?"
+                                />
+                            </div>
+                            <div class="composer-actions">
+                                <div
+                                    class="composer-action badge-rounded clickable"
+                                >
+                                    <i class="fb-icon fb-icon-photos"></i>
+                                    <span>Photo/Video</span>
+                                </div>
+
+                                <div
+                                    class="composer-action badge-rounded clickable"
+                                >
+                                    <i class="fb-icon fb-icon-tag-friends"></i>
+                                    <span>Tag friends</span>
+                                </div>
+
+                                <div
+                                    class="composer-action badge-rounded clickable"
+                                >
+                                    <i class="fb-icon fb-icon-feelings"></i>
+                                    <span>Feeling/Activity</span>
+                                </div>
+
+                                <div
+                                    class="composer-action more badge-rounded clickable"
+                                >
+                                    <i class="fb-icon fb-icon-more"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="stories-card card">
                         <div class="card-header transparent">
                             <span>Stories</span>
                             <a class="header-link" href="#">See all</a>

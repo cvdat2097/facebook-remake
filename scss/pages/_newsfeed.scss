@@ -457,6 +457,51 @@
         margin-bottom: 10px;
     }
 
+    .new-post {
+        .composer {
+            display: flex;
+            align-items: center;
+            @include border-bottom;
+            padding: 10px 0;
+
+            .avatar {
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+            }
+
+            #text-input {
+                border: none;
+                outline: none;
+
+                &::placeholder {
+                    color: $text-muted;
+                }
+            }
+        }
+
+        .composer-actions {
+            padding: 10px 0;
+
+            .composer-action {
+                padding: 5px 10px;
+
+                font-size: 0.75rem;
+                font-weight: bold;
+                color: $text-secondary;
+                border: none;
+                background: $background-badge;
+
+                &:hover {
+                    filter: brightness(0.9);
+                }
+                * {
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
     .stories {
         display: flex;
         justify-content: space-around;

@@ -23,3 +23,7 @@
     transition: $args;
     -webkit-transition: $args;
 }
+
+@mixin border-bottom($width: 1px) {
+    border-bottom: $width solid $border;
+}
