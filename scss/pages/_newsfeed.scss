@@ -741,5 +741,78 @@
                 display: block;
             }
         }
+
+        .post-comments {
+            .user-avatar {
+                flex: 0 0 32px;
+                width: 32px;
+                height: 32px;
+                margin-right: 5px;
+
+                &.in-reply {
+                    width: 25px;
+                    height: 25px;
+                    flex: 0 0 25px;
+                }
+            }
+
+            .comment {
+                display: flex;
+                align-items: flex-start;
+
+                .comment-content {
+                    .username {
+                        font-weight: bold;
+                    }
+
+                    .comment-message {
+                        padding: 10px;
+                        background: $background;
+                        border-radius: 20px;
+                        overflow: hidden;
+                    }
+                }
+
+                .comment-reactions {
+                    * {
+                        font-size: 0.7rem;
+                    }
+
+                    .comment-time {
+                        color: $text-secondary;
+                    }
+                }
+
+                .comment-replies {
+                    padding-top: 10px;
+                }
+            }
+
+            .comment-box {
+                display: flex;
+                align-items: stretch;
+                position: relative;
+
+                .comment-composer {
+                    outline: none;
+                    border: 1px solid $border;
+                    border-radius: 20px;
+                    background: $background;
+                    flex-grow: 1;
+                    padding-right: 120px;
+                    padding-left: 15px;
+                }
+
+                .comment-insert {
+                    position: absolute;
+                    right: 10px;
+                    bottom: 5px;
+
+                    * {
+                        margin-left: 7px;
+                    }
+                }
+            }
+        }
     }
 }

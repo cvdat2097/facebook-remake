@@ -425,3 +425,27 @@
         background-position: 0 -200px;
     }
 }
+
+.composer-icon {
+    background-image: url(../assets/comment-composer.png);
+    background-repeat: no-repeat;
+    background-size: 64px 360px;
+    height: 16px;
+    width: 16px;
+
+    &.composer-icon-emoji {
+        background-position: -36px -252px;
+    }
+
+    &.composer-icon-photo {
+        background-position: -36px -234px;
+    }
+
+    &.composer-icon-gif {
+        background-position: -36px -270px;
+    }
+
+    &.composer-icon-sticker {
+        background-position: -36px -306px;
+    }
+}
