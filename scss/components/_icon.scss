@@ -245,6 +245,12 @@
         background-position: 0 -356px;
     }
 
+    &.control-icon-privacy-public {
+        width: 12px;
+        height: 12px;
+        background-position: -28px -386px;
+    }
+
     &.control-icon-add-story {
         width: 24px;
         height: 24px;
@@ -344,5 +350,78 @@
 
     &.composer-icon-close {
         background-position: -310px -250px;
+    }
+}
+
+%reaction-small {
+    width: 18px;
+    height: 18px;
+}
+
+.reaction-icon {
+    display: inline-block;
+    background-image: url(../assets/reaction-icons.png);
+    background-repeat: no-repeat;
+    background-size: 98px 1234px;
+
+    &.reaction-icon-haha-small {
+        @extend %reaction-small;
+
+        background-position: -70px -1036px;
+    }
+
+    &.reaction-icon-like-small {
+        @extend %reaction-small;
+
+        background-position: -50px -1056px;
+    }
+
+    &.reaction-icon-sad-small {
+        @extend %reaction-small;
+
+        background-position: -50px -1076px;
+    }
+
+    &.reaction-icon-love-small {
+        @extend %reaction-small;
+
+        background-position: -70px -1056px;
+    }
+
+    &.reaction-icon-wow-small {
+        @extend %reaction-small;
+
+        background-position: -50px -1096px;
+    }
+
+    &.reaction-icon-angry-small {
+        @extend %reaction-small;
+
+        background-position: -72px -1014px;
+    }
+}
+
+.social-button {
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    background-image: url(../assets/social-buttons.png);
+    background-size: 74px 706px;
+    background-repeat: no-repeat;
+
+    &.social-button-like {
+        background-position: 0 -456px;
+    }
+
+    &.social-button-comment {
+        background-image: url(../assets/social-buttons-2.png);
+        background-size: 30px 594px;
+        background-position: 0 -180px;
+    }
+
+    &.social-button-share {
+        background-image: url(../assets/social-buttons-2.png);
+        background-size: 30px 594px;
+        background-position: 0 -200px;
     }
 }

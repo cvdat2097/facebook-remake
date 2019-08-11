@@ -634,4 +634,112 @@
             }
         }
     }
+
+    .fb-post {
+        position: relative;
+
+        .card-body {
+            padding: 0;
+        }
+
+        .poster {
+            display: flex;
+            align-items: center;
+
+            .poster-avatar {
+                width: 50px;
+                height: 50px;
+                margin-right: 5px;
+            }
+
+            .post-info {
+                .post-metadata {
+                    * {
+                        vertical-align: middle;
+                    }
+                }
+
+                .post-time {
+                    color: $text-secondary;
+                    font-size: 0.65rem;
+                }
+            }
+        }
+
+        .post-menu {
+            position: absolute;
+            top: 7px;
+            right: 10px;
+        }
+
+        .post-content {
+            line-height: 1.5;
+            padding: 5 15px 10px 15px;
+        }
+
+        .post-img {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .post-status {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            margin: 0 10px;
+            @include border-bottom();
+
+            .post-reactions {
+                * {
+                    vertical-align: middle;
+                }
+                a {
+                    color: $text-secondary;
+                    font-size: 0.8125rem;
+                }
+            }
+
+            .post-social-status {
+                a + a {
+                    margin-left: 5px;
+                }
+
+                a {
+                    color: $text-secondary;
+                    font-size: 0.8125rem;
+                }
+            }
+        }
+
+        .post-social-buttons {
+            display: flex;
+            padding: 5px 15px;
+            @include border-bottom;
+
+            .btn {
+                flex-grow: 1;
+                background: transparent;
+                border: none;
+
+                font-weight: bold;
+                color: $text-secondary;
+
+                &:hover {
+                    background: $background-hover;
+                }
+            }
+        }
+
+        .post-comments {
+            display: none;
+            padding: 10px 15px;
+
+            &.show {
+                display: block;
+            }
+        }
+    }
 }
