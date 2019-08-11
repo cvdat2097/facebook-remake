@@ -13,6 +13,12 @@
         font-weight: bold;
         color: $text-secondary;
 
+        .header-link {
+            float: right;
+            font-size: 0.8125rem;
+            font-weight: normal;
+        }
+
         &.transparent-with-border {
             background: transparent;
         }

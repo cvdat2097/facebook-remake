@@ -13,3 +13,13 @@
     grid-column: $args;
     -ms-grid-column: $args;
 }
+
+@mixin transform($args) {
+    transform: $args;
+    -webkit-transform: $args;
+}
+
+@mixin transition($args) {
+    transition: $args;
+    -webkit-transition: $args;
+}
