@@ -1,6 +1,10 @@
 #messenger-bar-container {
     border: 1px solid $border;
 
+    #messenger-bar-header {
+        display: none;
+    }
+
     ::-webkit-scrollbar {
         display: none;
     }

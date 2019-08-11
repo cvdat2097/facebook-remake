@@ -81,7 +81,23 @@
             </div>
 
             <div id="messenger-bar-container">
-                <section id="messenger-bar">
+                <section id="messenger-bar-header" class="clickable">
+                    <div class="header-caption-container">
+                        <div class="header-caption">Chat</div>
+                        <div class="header-description">123 online</div>
+                    </div>
+
+                    <span
+                        class="setting-button messenger-icon messenger-icon-settings clickable"
+                    ></span>
+                    <span
+                        class="setting-button messenger-icon messenger-icon-compose clickable"
+                    ></span>
+                    <span
+                        class="setting-button messenger-icon messenger-icon-create-groups clickable"
+                    ></span>
+                </section>
+                <section id="messenger-bar" class="show">
                     <div class="contact-group">
                         <div class="contact-header">Contacts</div>
                         <div class="contacts-container">
@@ -508,7 +524,7 @@
                         </div>
                     </div>
                 </section>
-                <div id="messenger-bar-settings">
+                <div id="messenger-bar-settings" class="show">
                     <span class="messenger-icon messenger-icon-search"></span>
                     <input
                         type="text"
