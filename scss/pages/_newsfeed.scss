@@ -456,28 +456,29 @@
     .card {
         margin-bottom: 10px;
     }
-    .new-post-backdrop {
+
+    #new-post-backdrop {
         display: none;
         position: fixed;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
-        background: $background-hover;
-        z-index: 100;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 999999;
 
         &.show {
             display: block;
         }
     }
-    .new-post {
+    #new-post {
         .composer-close {
             display: none;
         }
 
         &.expanded {
             position: relative;
-            z-index: 101;
+            z-index: 9999999;
 
             .composer-close {
                 display: inline-block;

@@ -1,4 +1,4 @@
-const CLASSNAME = {
+const PO_CLASSNAME = {
     POPOVER: 'popover',
     POPOVER_ARROW: 'popover-arrow',
     POPOVER_BODY: 'popover-body',
@@ -6,9 +6,9 @@ const CLASSNAME = {
     SHOW: 'show',
 };
 
-const SELECTOR = {
-    POPOVER: `.${CLASSNAME.POPOVER}`,
-    POPOVER_BODY: `.${CLASSNAME.POPOVER_BODY}`,
+const PO_SELECTOR = {
+    POPOVER: `.${PO_CLASSNAME.POPOVER}`,
+    POPOVER_BODY: `.${PO_CLASSNAME.POPOVER_BODY}`,
     DOCUMENT_BODY: 'body',
 };
 
@@ -22,30 +22,30 @@ const POPOVER_DIRECTION = {
 let openedPopovers = [];
 
 const togglePopover = function(popover) {
-    if ($(popover).hasClass(CLASSNAME.SHOW)) {
-        $(popover).removeClass(CLASSNAME.SHOW);
+    if ($(popover).hasClass(PO_CLASSNAME.SHOW)) {
+        $(popover).removeClass(PO_CLASSNAME.SHOW);
     } else {
-        $(popover).addClass(CLASSNAME.SHOW);
+        $(popover).addClass(PO_CLASSNAME.SHOW);
 
         openedPopovers.push(popover);
     }
 };
 
-$(SELECTOR.POPOVER).on('click', function(event) {
+$(PO_SELECTOR.POPOVER).on('click', function(event) {
     event.stopPropagation();
 
     togglePopover(this);
 });
 
 $('<div/>', {
-    class: CLASSNAME.POPOVER_ARROW,
-}).prependTo($(SELECTOR.POPOVER));
+    class: PO_CLASSNAME.POPOVER_ARROW,
+}).prependTo($(PO_SELECTOR.POPOVER));
 
-$(SELECTOR.POPOVER_BODY).on('click', function(event) {
+$(PO_SELECTOR.POPOVER_BODY).on('click', function(event) {
     event.stopPropagation();
 });
 
-$(SELECTOR.DOCUMENT_BODY).on('click', function() {
+$(PO_SELECTOR.DOCUMENT_BODY).on('click', function() {
     openedPopovers.forEach(p => togglePopover(p));
 
     openedPopovers = [];

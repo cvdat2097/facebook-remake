@@ -121,7 +121,8 @@ section {
 
         #messenger-bar {
             display: none !important;
-            max-height: 300px;
+            max-height: 450px;
+            padding: 0 10px 0 5px;
 
             &.show {
                 display: block !important;
