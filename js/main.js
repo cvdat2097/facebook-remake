@@ -22,8 +22,8 @@ const toggleElement = function(element, toggleClass) {
 };
 
 $(SELECTOR.MESSENGER_BAR_HEADER).on('click', () => {
-    toggleElement($(SELECTOR.MESSENGER_BAR, PO_CLASSNAME.SHOW));
-    toggleElement($(SELECTOR.MESSENGER_BAR_SETTINGS, PO_CLASSNAME.SHOW));
+    toggleElement($(SELECTOR.MESSENGER_BAR), CLASSNAME.SHOW);
+    toggleElement($(SELECTOR.MESSENGER_BAR_SETTINGS), CLASSNAME.SHOW);
 });
 
 const newPostComposer = $(SELECTOR.NEW_POST);
