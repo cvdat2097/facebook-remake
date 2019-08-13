@@ -21,7 +21,7 @@ const toggleElement = function(element, toggleClass) {
     }
 };
 
-$(SELECTOR.MESSENGER_BAR_HEADER).on('click', () => {
+$(SELECTOR.MESSENGER_BAR_HEADER).on('click', function() {
     toggleElement($(SELECTOR.MESSENGER_BAR), CLASSNAME.SHOW);
     toggleElement($(SELECTOR.MESSENGER_BAR_SETTINGS), CLASSNAME.SHOW);
 });

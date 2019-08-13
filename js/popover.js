@@ -23,12 +23,20 @@ let openedPopovers = [];
 
 const togglePopover = function(popover) {
     if ($(popover).hasClass(PO_CLASSNAME.SHOW)) {
-        $(popover).removeClass(PO_CLASSNAME.SHOW);
+        closePopover(popover);
     } else {
-        $(popover).addClass(PO_CLASSNAME.SHOW);
-
-        openedPopovers.push(popover);
+        openPopover(popover);
     }
+};
+
+const closePopover = function(popover) {
+    $(popover).removeClass(PO_CLASSNAME.SHOW);
+};
+
+const openPopover = function(popover) {
+    $(popover).addClass(PO_CLASSNAME.SHOW);
+
+    openedPopovers.push(popover);
 };
 
 $(PO_SELECTOR.POPOVER).on('click', function(event) {
@@ -46,7 +54,7 @@ $(PO_SELECTOR.POPOVER_BODY).on('click', function(event) {
 });
 
 $(PO_SELECTOR.DOCUMENT_BODY).on('click', function() {
-    openedPopovers.forEach(p => togglePopover(p));
+    openedPopovers.forEach(p => closePopover(p));
 
     openedPopovers = [];
 });
