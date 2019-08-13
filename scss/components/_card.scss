@@ -5,6 +5,10 @@
     overflow: hidden;
     font-size: 0.875rem;
 
+    &.no-border {
+        border: none;
+    }
+
     .card-header {
         display: flex;
         align-items: center;
@@ -37,5 +41,9 @@
 
     .card-body {
         padding: 5px 10px;
+    }
+
+    .card-footer {
+        @extend .card-header;
     }
 }

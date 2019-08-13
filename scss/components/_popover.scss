@@ -1,0 +1,32 @@
+.popover {
+    .popover-arrow {
+        display: none;
+        border: 10px solid transparent;
+        border-bottom-color: $white;
+        position: absolute;
+        top: calc(100% - 5px);
+
+        z-index: 99999;
+    }
+
+    .popover-body {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: calc(100% + 15px);
+
+        box-shadow: 0 0 5px $shadow;
+
+        z-index: 9999;
+    }
+
+    &.show {
+        .popover-body {
+            display: block;
+        }
+
+        .popover-arrow {
+            display: block;
+        }
+    }
+}
