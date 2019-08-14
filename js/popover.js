@@ -1,71 +1,69 @@
-const POPOVER = {};
+const popoverFeatures = (function() {
+    const _CLASSNAME = {
+        POPOVER: 'popover',
+        POPOVER_ARROW: 'popover-arrow',
+        POPOVER_BODY: 'popover-body',
+        FIXED_POPOVER: 'fixed',
+        SHOW: 'show',
+    };
 
-POPOVER.CLASSNAME = {
-    POPOVER: 'popover',
-    POPOVER_ARROW: 'popover-arrow',
-    POPOVER_BODY: 'popover-body',
-    FIXED_POPOVER: 'fixed',
-    SHOW: 'show',
-};
+    const _SELECTOR = {
+        POPOVER: '.popover',
+        POPOVER_BODY: '.popover-body',
+        DOCUMENT_BODY: 'body',
+    };
 
-POPOVER.SELECTOR = {
-    POPOVER: `.${POPOVER.CLASSNAME.POPOVER}`,
-    POPOVER_BODY: `.${POPOVER.CLASSNAME.POPOVER_BODY}`,
-    DOCUMENT_BODY: 'body',
-};
+    let _openedPopovers = [];
 
-POPOVER.DIRECTION = {
-    TOP: 'top',
-    BOTTOM: 'bottom',
-    LEFT: 'left',
-    RIGHT: 'right',
-};
+    const _togglePopover = function(popover) {
+        if ($(popover).hasClass(_CLASSNAME.SHOW)) {
+            _closePopover(popover);
+        } else {
+            _openPopover(popover);
+        }
+    };
 
-POPOVER.openedPopovers = [];
+    const _closePopover = function(popover) {
+        $(popover).removeClass(_CLASSNAME.SHOW);
+    };
 
-const togglePopover = function(popover) {
-    if ($(popover).hasClass(POPOVER.CLASSNAME.SHOW)) {
-        closePopover(popover);
-    } else {
-        openPopover(popover);
-    }
-};
+    const _openPopover = function(popover) {
+        $(popover).addClass(_CLASSNAME.SHOW);
 
-const closePopover = function(popover) {
-    $(popover).removeClass(POPOVER.CLASSNAME.SHOW);
-};
+        _openedPopovers.push(popover);
+    };
 
-const openPopover = function(popover) {
-    $(popover).addClass(POPOVER.CLASSNAME.SHOW);
-
-    POPOVER.openedPopovers.push(popover);
-};
-
-const popoverFeatures = {
-    addEventHandlers: function() {
-        $(POPOVER.SELECTOR.POPOVER).on('click', function(event) {
+    const addEventHandlers = function() {
+        $(_SELECTOR.POPOVER).on('click', function(event) {
             event.stopPropagation();
 
-            togglePopover(this);
+            _togglePopover(this);
         });
 
-        $(POPOVER.SELECTOR.POPOVER_BODY).on('click', function(event) {
+        $(_SELECTOR.POPOVER_BODY).on('click', function(event) {
             event.stopPropagation();
         });
 
-        $(POPOVER.SELECTOR.DOCUMENT_BODY).on('click', function() {
-            POPOVER.openedPopovers.forEach(p => closePopover(p));
+        $(_SELECTOR.DOCUMENT_BODY).on('click', function() {
+            _openedPopovers.forEach(function(p) {
+                _closePopover(p);
+            });
 
-            POPOVER.openedPopovers = [];
+            _openedPopovers = [];
         });
-    },
+    };
 
-    prependPopoverArrow: function() {
+    const prependPopoverArrow = function() {
         $('<div/>', {
-            class: POPOVER.CLASSNAME.POPOVER_ARROW,
-        }).prependTo($(POPOVER.SELECTOR.POPOVER));
-    },
-};
+            class: _CLASSNAME.POPOVER_ARROW,
+        }).prependTo($(_SELECTOR.POPOVER));
+    };
+
+    return {
+        addEventHandlers: addEventHandlers,
+        prependPopoverArrow: prependPopoverArrow,
+    };
+})();
 
 $(document).ready(function() {
     popoverFeatures.prependPopoverArrow();

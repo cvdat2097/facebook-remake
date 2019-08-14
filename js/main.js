@@ -1,18 +1,3 @@
-// MESSENGER-BAR
-const CLASSNAME = {
-    SHOW: 'show',
-    EXPANDED: 'expanded',
-};
-
-const SELECTOR = {
-    MESSENGER_BAR: '#messenger-bar',
-    MESSENGER_BAR_HEADER: '#messenger-bar-header',
-    MESSENGER_BAR_SETTINGS: '#messenger-bar-settings',
-
-    NEW_POST: '#new-post',
-    NEW_POST_BACKDROP: '#new-post-backdrop',
-};
-
 const toggleElement = function(element, toggleClass) {
     if ($(element).hasClass(toggleClass)) {
         $(element).removeClass(toggleClass);
@@ -21,33 +6,61 @@ const toggleElement = function(element, toggleClass) {
     }
 };
 
-const messengerBarFeatures = {
-    addEventHandlers: function() {
-        $(SELECTOR.MESSENGER_BAR_HEADER).on('click', function() {
-            toggleElement($(SELECTOR.MESSENGER_BAR), CLASSNAME.SHOW);
-            toggleElement($(SELECTOR.MESSENGER_BAR_SETTINGS), CLASSNAME.SHOW);
-        });
-    },
-};
+const messengerBarFeatures = (function() {
+    const _CLASSNAME = {
+        SHOW: 'show',
+    };
 
-const postComposerFeatures = {
-    addEventHandlers: function() {
-        const newPostComposer = $(SELECTOR.NEW_POST);
-        const newPostBackdrop = $(SELECTOR.NEW_POST_BACKDROP);
+    const _SELECTOR = {
+        MESSENGER_BAR: '#messenger-bar',
+        MESSENGER_BAR_HEADER: '#messenger-bar-header',
+        MESSENGER_BAR_SETTINGS: '#messenger-bar-settings',
+    };
+
+    const addEventHandlers = function() {
+        $(_SELECTOR.MESSENGER_BAR_HEADER).on('click', function() {
+            toggleElement($(_SELECTOR.MESSENGER_BAR), _CLASSNAME.SHOW);
+            toggleElement($(_SELECTOR.MESSENGER_BAR_SETTINGS), _CLASSNAME.SHOW);
+        });
+    };
+
+    return {
+        addEventHandlers: addEventHandlers,
+    };
+})();
+
+const postComposerFeatures = (function() {
+    const _CLASSNAME = {
+        SHOW: 'show',
+        EXPANDED: 'expanded',
+    };
+
+    const _SELECTOR = {
+        NEW_POST: '#new-post',
+        NEW_POST_BACKDROP: '#new-post-backdrop',
+    };
+
+    const addEventHandlers = function() {
+        const newPostComposer = $(_SELECTOR.NEW_POST);
+        const newPostBackdrop = $(_SELECTOR.NEW_POST_BACKDROP);
 
         $(newPostComposer).on('click', function() {
-            if (!newPostComposer.hasClass(CLASSNAME.EXPANDED)) {
-                $(newPostComposer).addClass(CLASSNAME.EXPANDED);
-                $(newPostBackdrop).addClass(CLASSNAME.SHOW);
+            if (!newPostComposer.hasClass(_CLASSNAME.EXPANDED)) {
+                $(newPostComposer).addClass(_CLASSNAME.EXPANDED);
+                $(newPostBackdrop).addClass(_CLASSNAME.SHOW);
             }
         });
 
         $(newPostBackdrop).on('click', function() {
-            $(newPostComposer).removeClass(CLASSNAME.EXPANDED);
-            $(newPostBackdrop).removeClass(CLASSNAME.SHOW);
+            $(newPostComposer).removeClass(_CLASSNAME.EXPANDED);
+            $(newPostBackdrop).removeClass(_CLASSNAME.SHOW);
         });
-    },
-};
+    };
+
+    return {
+        addEventHandlers: addEventHandlers,
+    };
+})();
 
 $(document).ready(function() {
     messengerBarFeatures.addEventHandlers();
