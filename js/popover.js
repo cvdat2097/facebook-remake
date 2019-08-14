@@ -1,4 +1,6 @@
-const PO_CLASSNAME = {
+const POPOVER = {};
+
+POPOVER.CLASSNAME = {
     POPOVER: 'popover',
     POPOVER_ARROW: 'popover-arrow',
     POPOVER_BODY: 'popover-body',
@@ -6,23 +8,23 @@ const PO_CLASSNAME = {
     SHOW: 'show',
 };
 
-const PO_SELECTOR = {
-    POPOVER: `.${PO_CLASSNAME.POPOVER}`,
-    POPOVER_BODY: `.${PO_CLASSNAME.POPOVER_BODY}`,
+POPOVER.SELECTOR = {
+    POPOVER: `.${POPOVER.CLASSNAME.POPOVER}`,
+    POPOVER_BODY: `.${POPOVER.CLASSNAME.POPOVER_BODY}`,
     DOCUMENT_BODY: 'body',
 };
 
-const POPOVER_DIRECTION = {
+POPOVER.DIRECTION = {
     TOP: 'top',
     BOTTOM: 'bottom',
     LEFT: 'left',
     RIGHT: 'right',
 };
 
-let openedPopovers = [];
+POPOVER.openedPopovers = [];
 
 const togglePopover = function(popover) {
-    if ($(popover).hasClass(PO_CLASSNAME.SHOW)) {
+    if ($(popover).hasClass(POPOVER.CLASSNAME.SHOW)) {
         closePopover(popover);
     } else {
         openPopover(popover);
@@ -30,31 +32,42 @@ const togglePopover = function(popover) {
 };
 
 const closePopover = function(popover) {
-    $(popover).removeClass(PO_CLASSNAME.SHOW);
+    $(popover).removeClass(POPOVER.CLASSNAME.SHOW);
 };
 
 const openPopover = function(popover) {
-    $(popover).addClass(PO_CLASSNAME.SHOW);
+    $(popover).addClass(POPOVER.CLASSNAME.SHOW);
 
-    openedPopovers.push(popover);
+    POPOVER.openedPopovers.push(popover);
 };
 
-$(PO_SELECTOR.POPOVER).on('click', function(event) {
-    event.stopPropagation();
+const popoverFeatures = {
+    addEventHandlers: function() {
+        $(POPOVER.SELECTOR.POPOVER).on('click', function(event) {
+            event.stopPropagation();
 
-    togglePopover(this);
-});
+            togglePopover(this);
+        });
 
-$('<div/>', {
-    class: PO_CLASSNAME.POPOVER_ARROW,
-}).prependTo($(PO_SELECTOR.POPOVER));
+        $(POPOVER.SELECTOR.POPOVER_BODY).on('click', function(event) {
+            event.stopPropagation();
+        });
 
-$(PO_SELECTOR.POPOVER_BODY).on('click', function(event) {
-    event.stopPropagation();
-});
+        $(POPOVER.SELECTOR.DOCUMENT_BODY).on('click', function() {
+            POPOVER.openedPopovers.forEach(p => closePopover(p));
 
-$(PO_SELECTOR.DOCUMENT_BODY).on('click', function() {
-    openedPopovers.forEach(p => closePopover(p));
+            POPOVER.openedPopovers = [];
+        });
+    },
 
-    openedPopovers = [];
+    prependPopoverArrow: function() {
+        $('<div/>', {
+            class: POPOVER.CLASSNAME.POPOVER_ARROW,
+        }).prependTo($(POPOVER.SELECTOR.POPOVER));
+    },
+};
+
+$(document).ready(function() {
+    popoverFeatures.prependPopoverArrow();
+    popoverFeatures.addEventHandlers();
 });
