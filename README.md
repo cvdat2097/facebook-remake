@@ -4,6 +4,11 @@
 
 A complete remake of facebook.com
 
+## Compiling
+Use `sass` command to build css files first 
+
+`sass scss:css`
+
 ## Technology stack
 
 1. HTML
