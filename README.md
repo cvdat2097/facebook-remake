@@ -4,8 +4,17 @@
 
 A complete remake of facebook.com
 
+## Screenshot
+
+![screenshot](./docs/screenshot.png)
+
+## Live Demo
+
+https://cvdat2097.github.io/facebook-remake/
+
 ## Compiling
-Use `sass` command to build css files first 
+
+Use `sass` command to build css files first
 
 `sass scss:css`
 
@@ -18,4 +27,5 @@ Use `sass` command to build css files first
 5. jQuery
 
 ## Completed Pages
+
 1. News Feed
